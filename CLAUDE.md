@@ -1,91 +1,94 @@
-# Claude Web — Development Guidelines
+# MTZ Klíma — Development Guidelines
 
 ## Project Overview
 
-This is a professional web application project. Follow these guidelines in all work.
+Website for **MTZ Klíma**, a Hungarian tractor air conditioning specialist based in Debrecen.
+The site presents services, products, and contact information in Hungarian.
 
-## Tech Stack Defaults
+## Tech Stack
 
-- **Framework**: React 19 with TypeScript (strict mode)
-- **Styling**: Tailwind CSS v4
-- **Bundler**: Vite
-- **Testing**: Vitest + Testing Library
-- **Package manager**: npm
+- **Preferred**: Vanilla HTML/CSS/JS — no framework unless complexity justifies it
+- **If a build tool is needed**: Astro (static output, no JS framework)
+- **Styling**: Plain CSS; no Tailwind or CSS-in-JS
+- **Deployment**: GitHub Pages — no Vercel, no other hosting
+- **Package manager**: npm (only if using Astro)
 
-Adjust per actual stack as the project evolves.
+Default to the simplest option that gets the job done. Reach for Astro only if the site needs templating, partials, or content collections. Never add a JS framework (React, Vue, etc.) unless there is a concrete, unavoidable reason.
+
+## Language
+
+All user-facing content is written in **Hungarian**. Code identifiers (variables, functions, classes) may be English. Comments may be in either language, whichever is clearer.
 
 ## Code Style
 
-- TypeScript strict mode — no `any`, no `// @ts-ignore`
-- Functional components only; no class components
-- Named exports only; no default exports except for route-level pages
-- File names: `kebab-case.ts` for utilities, `PascalCase.tsx` for components
-- Keep components under 200 lines; extract logic into hooks when state/effects grow complex
-- Co-locate tests next to source files (`foo.test.ts` beside `foo.ts`)
+- Semantic HTML5 — use `<nav>`, `<main>`, `<section>`, `<article>`, `<footer>` correctly
+- CSS: BEM-style class names (`block__element--modifier`); no inline styles
+- JavaScript: vanilla ES2020+, no bundler required for simple pages
+- No TypeScript unless using Astro
+- File names: `kebab-case` for all files
+- One HTML file per page; shared markup extracted into Astro components or server-side includes if using a build tool
 
-## Architecture
+## Architecture (vanilla)
 
-- `src/components/` — shared, reusable UI components
-- `src/features/` — feature-scoped modules (own components, hooks, types)
-- `src/hooks/` — shared custom hooks
-- `src/lib/` — third-party adapters and utility wrappers
-- `src/types/` — shared TypeScript types and interfaces
-- `src/api/` — API client functions (one file per resource)
+```
+/
+├── index.html
+├── szolgaltatasok.html   # Services
+├── kapcsolat.html        # Contact
+├── css/
+│   └── style.css
+├── js/
+│   └── main.js
+└── img/
+```
 
-No barrel files (`index.ts` re-exports) unless the public API of a feature module needs to be stable.
+## Architecture (Astro, if adopted)
+
+```
+src/
+├── pages/
+├── components/
+├── layouts/
+└── assets/
+```
 
 ## Security
 
-- Never commit secrets, API keys, or credentials — use `.env.local` (gitignored)
-- Sanitize all user input before rendering; avoid `dangerouslySetInnerHTML`
-- Use `Content-Security-Policy` headers in production
-- Validate and type-check all data from external APIs at the boundary (use Zod or equivalent)
-- HTTPS-only; no mixed content
+- Never commit secrets or API keys — use `.env` (gitignored) for any keys
+- Sanitize any user-supplied values before inserting into the DOM
+- Contact forms: validate on both client and server side (or use a third-party form service)
+- HTTPS enforced via GitHub Pages
 
 ## Performance
 
-- Lazy-load routes and heavy components with `React.lazy`
-- Memoize expensive computations with `useMemo`; avoid premature memoization of callbacks
+- Images: WebP format, explicit `width`/`height`, `loading="lazy"` for below-fold images
 - Prefer CSS transitions over JS animations
-- Images: use modern formats (WebP/AVIF), explicit `width`/`height`, `loading="lazy"` for below-fold images
+- No unnecessary third-party scripts; load fonts from self-hosted or system stack when possible
+- Target Lighthouse score ≥ 90 on mobile
 
 ## Accessibility
 
-- All interactive elements must be keyboard-accessible and have visible focus styles
-- Images require descriptive `alt` text (empty `alt=""` for decorative images)
-- Use semantic HTML (`<nav>`, `<main>`, `<section>`, `<button>`) before reaching for `<div>`
-- ARIA attributes only when semantic HTML is insufficient
-- Color contrast ratio ≥ 4.5:1 for normal text, ≥ 3:1 for large text
+- All interactive elements keyboard-accessible with visible focus styles
+- Images: descriptive `alt` in Hungarian; `alt=""` for decorative images
+- Color contrast ≥ 4.5:1 for body text, ≥ 3:1 for large text
+- `lang="hu"` on the `<html>` element
 
 ## Git
 
-- Branch naming: `feat/description`, `fix/description`, `chore/description`
-- Commits: imperative mood, present tense — "Add login form", not "Added login form"
-- One logical change per commit; squash fixup commits before merging
-- PRs require passing CI before merge
+- Branch naming: `feat/leiras`, `fix/leiras`, `chore/leiras`
+- Commits: imperative mood — "Add kapcsolat oldal", not "Added page"
+- One logical change per commit
+- `main` branch deploys to GitHub Pages
 
-## Testing
+## Deployment
 
-- Unit tests for all utility functions and custom hooks
-- Component tests for non-trivial UI behavior (user interactions, conditional rendering)
-- Avoid testing implementation details; test observable behavior
-- No snapshot tests
+GitHub Pages serves the `main` branch (or a `/docs` folder — configure in repo settings).
+No CI pipeline required unless Astro is adopted; Astro builds go through a GitHub Actions workflow.
 
-## Environment Variables
-
-Prefix all client-side env vars with `VITE_`. Server-side secrets must never be prefixed with `VITE_`.
-
-```
-VITE_API_BASE_URL=https://api.example.com
-```
-
-## Commands
+## Commands (Astro only)
 
 ```bash
-npm run dev          # start dev server
-npm run build        # production build
-npm run preview      # preview production build locally
-npm run test         # run tests
-npm run lint         # lint
-npm run typecheck    # type-check without emitting
+npm run dev      # local dev server
+npm run build    # static build → dist/
+npm run preview  # preview build locally
 ```
