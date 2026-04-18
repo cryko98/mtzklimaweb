@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="hu">
+<html lang="hu" data-lang="hu">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="MTZ Klíma – Belarus traktor klímarendszer beépítés, javítás, állófűtés Debrecenben. F-gáz VI–VII. minősítéssel, 1 év garanciával. +36 (30) 978 0784" />
-  <title>MTZ Klíma – Traktor klímarendszer beépítés | Debrecen</title>
+  <meta name="description" content="MTZ Klíma – Traktor, autó és munkagép klímarendszer beépítés és javítás Debrecenben. F-gáz VI–VII. minősítéssel, 1 év garanciával. +36 (30) 978 0784" />
+  <title>MTZ Klíma – Traktor és gépjármű klímarendszer | Debrecen</title>
   <link rel="stylesheet" href="css/style.css" />
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='5' fill='%231d72c8'/><text x='7' y='23' font-size='18' fill='white' font-weight='bold'>K</text></svg>" />
 </head>
@@ -21,7 +21,7 @@
           </div>
           <div class="topbar__elem">
             <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-            H–P: 8:00–17:00
+            <span data-i18n="topbar.hours">H–P: 8:00–17:00</span>
           </div>
         </div>
         <div class="topbar__jobb">
@@ -47,19 +47,26 @@
             <div class="nav__logo-sub">Debrecen</div>
           </div>
         </a>
+
         <ul class="nav__links" id="navLinks">
-          <li><a href="#szolgaltatasok">Szolgáltatások</a></li>
-          <li><a href="#bemutatkozas">Rólunk</a></li>
-          <li><a href="#allofutes">Termékek</a></li>
-          <li><a href="#tipusok">MTZ típusok</a></li>
-          <li><a href="#kapcsolat">Kapcsolat</a></li>
+          <li><a href="#szolgaltatasok" data-i18n="nav.services">Szolgáltatások</a></li>
+          <li><a href="#bemutatkozas" data-i18n="nav.about">Rólunk</a></li>
+          <li><a href="#allofutes" data-i18n="nav.products">Termékek</a></li>
+          <li><a href="#tipusok" data-i18n="nav.types">Típusok</a></li>
+          <li><a href="#kapcsolat" data-i18n="nav.contact">Kapcsolat</a></li>
           <li>
             <a href="tel:+36309780784" class="nav__tel">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-              Hívjon minket
+              <span data-i18n="nav.call">Hívjon minket</span>
             </a>
           </li>
         </ul>
+
+        <div class="nav__lang">
+          <button class="nav__lang-btn active" data-lang="hu">HU</button>
+          <button class="nav__lang-btn" data-lang="ro">RO</button>
+        </div>
+
         <button class="nav__burger" id="burger" aria-label="Menü" aria-expanded="false">
           <span></span><span></span><span></span>
         </button>
@@ -69,76 +76,89 @@
 
   <!-- HERO -->
   <section class="hero" id="fooldal">
-    <div class="hero__hatter"></div>
+    <div class="hero__hatter" id="heroBg"></div>
     <div class="container">
       <div class="hero__inner">
         <div>
-          <div class="hero__pre">Belarus MTZ traktor klíma szakértő</div>
-          <h1 class="hero__cim">Klímarendszer<br>beépítés és javítás<br><em>traktorokhoz</em></h1>
-          <p class="hero__szov">F-gáz VI–VII. minősítéssel rendelkező szakemberek tervezik és szerelik be a klímarendszert az Ön MTZ traktorába – 1 év garanciával, kiszállással az egész ország területére.</p>
+          <div class="hero__pre" data-i18n="hero.tag">Traktor és gépjármű klíma szakértő</div>
+          <h1 class="hero__cim">
+            <span data-i18n="hero.h1.1">Klímarendszer beépítés</span><br>
+            <span data-i18n="hero.h1.2">és javítás –</span><br>
+            <em data-i18n="hero.h1.3">bármilyen járműbe</em>
+          </h1>
+          <p class="hero__szov" data-i18n="hero.desc">F-gáz VI–VII. minősítéssel rendelkező szakemberek tervezik és szerelik be a klímarendszert az Ön traktorába, autójába vagy munkagépébe – 1 év garanciával, kiszállással az egész ország területére.</p>
           <div class="hero__gombok">
-            <a href="#kapcsolat" class="btn btn--primary">Ajánlatot kérek</a>
-            <a href="#szolgaltatasok" class="btn btn--ghost">Szolgáltatások</a>
+            <a href="#kapcsolat" class="btn btn--primary" data-i18n="hero.cta1">Ajánlatot kérek</a>
+            <a href="#szolgaltatasok" class="btn btn--ghost" data-i18n="hero.cta2">Szolgáltatások</a>
           </div>
         </div>
         <div class="hero__info">
           <div class="hero__info-sor">
-            <span class="hero__info-cimke">Telefon</span>
+            <span class="hero__info-cimke" data-i18n="info.phone">Telefon</span>
             <span class="hero__info-ertek"><a href="tel:+36309780784">+36 (30) 978 0784</a></span>
           </div>
           <div class="hero__info-sor">
-            <span class="hero__info-cimke">E-mail</span>
+            <span class="hero__info-cimke" data-i18n="info.email">E-mail</span>
             <span class="hero__info-ertek"><a href="mailto:info@mtzklima.hu">info@mtzklima.hu</a></span>
           </div>
           <div class="hero__info-sor">
-            <span class="hero__info-cimke">Cím</span>
+            <span class="hero__info-cimke" data-i18n="info.address">Cím</span>
             <span class="hero__info-ertek">4002 Debrecen<br>Jégvirág utca 21</span>
           </div>
           <div class="hero__info-sor">
-            <span class="hero__info-cimke">Nyitvatartás</span>
-            <span class="hero__info-ertek">Hétfő–Péntek, 8:00–17:00</span>
+            <span class="hero__info-cimke" data-i18n="info.hours">Nyitvatartás</span>
+            <span class="hero__info-ertek" data-i18n="info.hours.val">Hétfő–Péntek, 8:00–17:00</span>
           </div>
         </div>
       </div>
       <div class="hero__statsor">
         <div class="hero__stat">
-          <div class="hero__stat-szam">1<sup>év</sup></div>
-          <div class="hero__stat-cimke">garancia</div>
+          <div class="hero__stat-szam" data-counter="1">1<sup data-i18n="stat1.sup">év</sup></div>
+          <div class="hero__stat-cimke" data-i18n="stat1.label">garancia</div>
         </div>
         <div class="hero__stat">
           <div class="hero__stat-szam">F-gáz</div>
-          <div class="hero__stat-cimke">VI–VII. minősítés</div>
+          <div class="hero__stat-cimke" data-i18n="stat2.label">VI–VII. minősítés</div>
         </div>
         <div class="hero__stat">
-          <div class="hero__stat-szam">5+</div>
-          <div class="hero__stat-cimke">MTZ típus</div>
+          <div class="hero__stat-szam" data-counter="5">5<sup>+</sup></div>
+          <div class="hero__stat-cimke" data-i18n="stat3.label">MTZ típus</div>
         </div>
       </div>
     </div>
   </section>
+
+  <!-- TICKER -->
+  <div class="ticker" aria-hidden="true">
+    <div class="ticker__track">
+      <div class="ticker__inner" id="tickerInner">
+        <!-- JS tölti be, kétszer -->
+      </div>
+    </div>
+  </div>
 
   <!-- TRUST BAR -->
   <div class="trust">
     <div class="container">
       <div class="trust__inner">
         <div class="trust__elem">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
-          Szakképzett technikusok
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          <span data-i18n="trust.certified">Szakképzett technikusok</span>
         </div>
         <div class="trust__sep"></div>
         <div class="trust__elem">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-          H–P: 8:00–17:00
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="3 11 22 2 13 21 11 13 3 11"/></svg>
+          <span data-i18n="trust.onsite">Kiszállás az ügyfélhez</span>
         </div>
         <div class="trust__sep"></div>
         <div class="trust__elem">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="3 11 22 2 13 21 11 13 3 11"/></svg>
-          Kiszállás az ügyfélhez
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+          <span data-i18n="trust.warranty">1 év garancia</span>
         </div>
         <div class="trust__sep"></div>
         <div class="trust__elem">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-          1 év garancia
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-4 0v2M12 12v4"/></svg>
+          <span data-i18n="trust.vehicles">Traktor · Autó · Kombájn</span>
         </div>
       </div>
     </div>
@@ -147,66 +167,91 @@
   <!-- SZOLGÁLTATÁSOK -->
   <section class="szolg" id="szolgaltatasok">
     <div class="container">
-      <div class="sh">
-        <div class="sh__pre">Szolgáltatásaink</div>
-        <h2 class="sh__cim">Mindent egy helyen –<br>tervezéstől a garanciáig</h2>
-        <p class="sh__szov">Klímabeépítéstől az elektromos munkákon át az állófűtés beszereléséig vállalunk minden kapcsolódó feladatot.</p>
+      <div class="sh" data-reveal>
+        <div class="sh__pre" data-i18n="services.pre">Szolgáltatásaink</div>
+        <h2 class="sh__cim" data-i18n="services.h2">Mindent egy helyen – tervezéstől a garanciáig</h2>
+        <p class="sh__szov" data-i18n="services.desc">Klímabeépítéstől az elektromos munkákon át az állófűtés beszerelésig vállalunk minden feladatot – bármilyen traktorban, autóban vagy munkagépben.</p>
       </div>
-
       <div class="szolg__racs">
 
-        <div class="szolg__kartya">
+        <div class="szolg__kartya" data-reveal data-delay="1">
           <div class="szolg__kartya-szam">01</div>
           <div class="szolg__ikon">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg>
+            <!-- Klímabeépítés: hőcserélő/hűtő ikon -->
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <path d="M12 2v20M2 12h20M4.93 4.93l14.14 14.14M19.07 4.93 4.93 19.07"/>
+              <circle cx="12" cy="12" r="3"/>
+            </svg>
           </div>
-          <h3 class="szolg__kartya-cim">Klímarendszer beépítés</h3>
-          <p class="szolg__kartya-szov">Új klímarendszerek tervezése és beszerelése Belarus MTZ traktorokba. A kompresszor elhelyezése a motor típusától függően, egyedileg kerül kialakításra – a rendszer a legnagyobb nyári hőségben is megbízhatóan hűt.</p>
+          <h3 class="szolg__kartya-cim" data-i18n="s1.title">Klímarendszer beépítés</h3>
+          <p class="szolg__kartya-szov" data-i18n="s1.desc">Új klímarendszerek tervezése és beszerelése bármilyen traktorba és munkagépbe. A kompresszor elhelyezése egyedileg, a motor típusától függően kerül kialakításra – a rendszer a legnagyobb nyári hőségben is megbízhatóan hűt.</p>
         </div>
 
-        <div class="szolg__kartya">
+        <div class="szolg__kartya" data-reveal data-delay="2">
           <div class="szolg__kartya-szam">02</div>
           <div class="szolg__ikon">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+            <!-- Javítás: csavarkulcs + jégkristály -->
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
+            </svg>
           </div>
-          <h3 class="szolg__kartya-cim">Klímarendszer javítás</h3>
-          <p class="szolg__kartya-szov">Kompresszor felújítás, kondenzátor javítás, hűtőközeg töltés. A leggyakoribb hibák rendszerszivárgásokból erednek, amelyek nitrogénes nyomáspróbával gyorsan és pontosan lokalizálhatók.</p>
+          <h3 class="szolg__kartya-cim" data-i18n="s2.title">Klímarendszer javítás</h3>
+          <p class="szolg__kartya-szov" data-i18n="s2.desc">Kompresszor felújítás, kondenzátor javítás, hűtőközeg töltés. A leggyakoribb hibák rendszerszivárgásokból erednek, amelyek nitrogénes nyomáspróbával gyorsan és pontosan lokalizálhatók.</p>
         </div>
 
-        <div class="szolg__kartya">
+        <div class="szolg__kartya" data-reveal data-delay="3">
           <div class="szolg__kartya-szam">03</div>
           <div class="szolg__ikon">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/><line x1="12" y1="12" x2="12" y2="16"/><line x1="10" y1="14" x2="14" y2="14"/></svg>
+            <!-- Autó/gépjármű klíma -->
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <path d="M5 17H3a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v9a2 2 0 0 1-2 2h-2"/>
+              <circle cx="7" cy="17" r="2"/>
+              <circle cx="17" cy="17" r="2"/>
+              <path d="M9 11V9M12 11V7M15 11V9"/>
+            </svg>
           </div>
-          <h3 class="szolg__kartya-cim">Kombájn és munkagép klimatizálás</h3>
-          <p class="szolg__kartya-szov">Kombájnok, betakarítógépek és egyéb munkagépek klímarendszereinek tervezése és beépítése. Minden géptípusra egyedi megoldást dolgozunk ki a hatékony és tartós hűtés érdekében.</p>
+          <h3 class="szolg__kartya-cim" data-i18n="s3.title">Autó és gépjármű klíma</h3>
+          <p class="szolg__kartya-szov" data-i18n="s3.desc">Személyautók, teherautók és egyéb gépjárművek klímarendszereinek javítása, karbantartása és töltése. Gyors, megbízható szerviz – helyszínen vagy Debrecenben.</p>
         </div>
 
-        <div class="szolg__kartya">
+        <div class="szolg__kartya" data-reveal data-delay="1">
           <div class="szolg__kartya-szam">04</div>
           <div class="szolg__ikon">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 3h18v18H3z" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+            <!-- Kombájn/nagy gép -->
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <rect x="2" y="8" width="20" height="10" rx="2"/>
+              <path d="M6 8V6a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v2"/>
+              <circle cx="6" cy="18" r="2"/><circle cx="18" cy="18" r="2"/>
+              <path d="M10 12h4M12 10v4"/>
+            </svg>
           </div>
-          <h3 class="szolg__kartya-cim">Fertőtlenítés és belső tisztítás</h3>
-          <p class="szolg__kartya-szov">Ózongenerátor kezeléssel – az ózon visszaalakul oxigénné, nyomot sem hagy – vagy habos permettel, amely elpusztítja a baktériumokat és szagokat, miközben védi az elpárologtató komponenseket.</p>
+          <h3 class="szolg__kartya-cim" data-i18n="s4.title">Kombájn és munkagép klimatizálás</h3>
+          <p class="szolg__kartya-szov" data-i18n="s4.desc">Kombájnok, betakarítógépek és egyéb munkagépek klímarendszereinek tervezése és beépítése. Minden géptípusra egyedi megoldást dolgozunk ki a hatékony és tartós hűtés érdekében.</p>
         </div>
 
-        <div class="szolg__kartya">
+        <div class="szolg__kartya" data-reveal data-delay="2">
           <div class="szolg__kartya-szam">05</div>
           <div class="szolg__ikon">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polyline points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+            <!-- Fertőtlenítés: spray/csepp -->
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <path d="M12 22a7 7 0 0 0 7-7c0-2-1-3.9-3-5.5s-3.5-4-4-6.5c-.5 2.5-2 4.9-4 6.5C6 11.1 5 13 5 15a7 7 0 0 0 7 7z"/>
+              <path d="M12 15v-3M10 14l2 1 2-1"/>
+            </svg>
           </div>
-          <h3 class="szolg__kartya-cim">Elektromos szerelés</h3>
-          <p class="szolg__kartya-szov">Önindító és generátor javítás, gyújtáshiba diagnosztika, világítás szerelés és fedélzeti számítógép hibakód olvasás mezőgazdasági gépeken.</p>
+          <h3 class="szolg__kartya-cim" data-i18n="s5.title">Fertőtlenítés és belső tisztítás</h3>
+          <p class="szolg__kartya-szov" data-i18n="s5.desc">Ózongenerátor kezeléssel – az ózon visszaalakul oxigénné, nyomot sem hagy – vagy habos permettel, amely elpusztítja a baktériumokat és szagokat, miközben védi az elpárologtató komponenseket.</p>
         </div>
 
-        <div class="szolg__kartya">
+        <div class="szolg__kartya" data-reveal data-delay="3">
           <div class="szolg__kartya-szam">06</div>
           <div class="szolg__ikon">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            <!-- Elektromos: villám/áramkör -->
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <polyline points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+            </svg>
           </div>
-          <h3 class="szolg__kartya-cim">Személyes szaktanácsadás</h3>
-          <p class="szolg__kartya-szov">Nem biztos, milyen megoldás illik a géptípusához? Vígvári Sándor személyesen segít megtalálni a legmegfelelőbb klímarendszert – a felmérésből konkrét ajánlat lesz.</p>
+          <h3 class="szolg__kartya-cim" data-i18n="s6.title">Elektromos szerelés</h3>
+          <p class="szolg__kartya-szov" data-i18n="s6.desc">Önindító és generátor javítás, gyújtáshiba diagnosztika, világítás szerelés és fedélzeti számítógép hibakód olvasás mezőgazdasági gépeken és gépjárműveken.</p>
         </div>
 
       </div>
@@ -217,56 +262,51 @@
   <section class="bemut" id="bemutatkozas">
     <div class="container">
       <div class="bemut__inner">
-        <div>
-          <div class="sh__pre">Rólunk</div>
-          <blockquote class="bemut__idezet">
+        <div data-reveal="left">
+          <div class="sh__pre" data-i18n="about.pre">Rólunk</div>
+          <blockquote class="bemut__idezet" data-i18n="about.quote">
             „Az általam összeállított rendszerek tartósak a működésben, könnyen karbantarthatók – olyan hűtési paraméterekkel, hogy a legnagyobb melegben is hatékonyan működjenek."
           </blockquote>
-          <div class="bemut__cite">Vígvári Sándor — gépészmérnök, tulajdonos</div>
-
-          <div class="bemut__robotnote">
+          <div class="bemut__cite" data-i18n="about.cite">Vígvári Sándor — gépészmérnök, tulajdonos</div>
+          <div class="bemut__robotnote" data-i18n="about.robot">
             <strong>Vígvári Sándor</strong> ezen felül HI-Target RTK robotkormány rendszerek telepítésével is foglalkozik. Érdeklődjön elérhetőségeinken.
           </div>
         </div>
-
-        <div class="bemut__lista">
+        <div class="bemut__lista" data-reveal="right">
           <div class="bemut__elem">
             <div class="bemut__ikon">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
             </div>
             <div>
-              <div class="bemut__elem-cim">F-gáz VI–VII. minősítés</div>
-              <div class="bemut__elem-szov">A legmagasabb szintű szakképesítés hűtőközeg kezelésre – minden technikusunk rendelkezik ezzel a tanúsítvánnyal.</div>
+              <div class="bemut__elem-cim" data-i18n="a1.title">F-gáz VI–VII. minősítés</div>
+              <div class="bemut__elem-szov" data-i18n="a1.desc">A legmagasabb szintű szakképesítés hűtőközeg kezelésre – minden technikusunk rendelkezik ezzel a tanúsítvánnyal.</div>
             </div>
           </div>
-
           <div class="bemut__elem">
             <div class="bemut__ikon">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
             </div>
             <div>
-              <div class="bemut__elem-cim">1 év teljes körű garancia</div>
-              <div class="bemut__elem-szov">Minden újonnan beszerelt rendszerre 1 év garanciát vállalunk, kötelező 6 hónapos és garanciavégi ellenőrzéssel.</div>
+              <div class="bemut__elem-cim" data-i18n="a2.title">1 év teljes körű garancia</div>
+              <div class="bemut__elem-szov" data-i18n="a2.desc">Minden újonnan beszerelt rendszerre 1 év garanciát vállalunk, kötelező 6 hónapos és garanciavégi ellenőrzéssel.</div>
             </div>
           </div>
-
           <div class="bemut__elem">
             <div class="bemut__ikon">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="3 11 22 2 13 21 11 13 3 11"/></svg>
             </div>
             <div>
-              <div class="bemut__elem-cim">Kiszállás az ügyfélhez</div>
-              <div class="bemut__elem-szov">A munkák nagy részét helyszínen végezzük. Debrecenből az egész ország területén vállalunk kiszállást.</div>
+              <div class="bemut__elem-cim" data-i18n="a3.title">Kiszállás az ügyfélhez</div>
+              <div class="bemut__elem-szov" data-i18n="a3.desc">A munkák nagy részét helyszínen végezzük. Debrecenből az egész ország területén – sőt, a román határ menti településekre is vállalunk kiszállást.</div>
             </div>
           </div>
-
           <div class="bemut__elem">
             <div class="bemut__ikon">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
             </div>
             <div>
-              <div class="bemut__elem-cim">Tartós, üzembiztos kivitelezés</div>
-              <div class="bemut__elem-szov">Könnyen karbantartható rendszerek, amelyek a piaci igényekhez igazítva, folyamatos szakmai fejlődés mellett készülnek.</div>
+              <div class="bemut__elem-cim" data-i18n="a4.title">Tartós, üzembiztos kivitelezés</div>
+              <div class="bemut__elem-szov" data-i18n="a4.desc">Könnyen karbantartható rendszerek, amelyek a piaci igényekhez igazítva, folyamatos szakmai fejlődés mellett készülnek.</div>
             </div>
           </div>
         </div>
@@ -277,58 +317,52 @@
   <!-- ALAPELEMEK -->
   <section class="ciklus" id="alapelemek">
     <div class="container">
-      <div class="sh">
-        <div class="sh__pre">Alapelemek</div>
-        <h2 class="sh__cim">A hűtési ciklus öt komponense</h2>
-        <p class="sh__szov">Minden klímarendszer ugyanazon az öt alapkomponensen alapul – ezeket tervezzük, szereljük és tartjuk karban.</p>
+      <div class="sh" data-reveal>
+        <div class="sh__pre" data-i18n="comp.pre">Alapelemek</div>
+        <h2 class="sh__cim" data-i18n="comp.h2">A hűtési ciklus öt komponense</h2>
+        <p class="sh__szov" data-i18n="comp.desc">Minden klímarendszer ugyanazon az öt alapkomponensen alapul – ezeket tervezzük, szereljük és tartjuk karban.</p>
       </div>
-      <div class="ciklus__racs">
-
+      <div class="ciklus__racs" data-reveal>
         <div class="ciklus__elem">
           <div class="ciklus__elem-szam">01 / 05</div>
           <div class="ciklus__elem-ikon">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><path d="M14.31 8l5.74 9.94M9.69 8h11.48M7.38 12l5.74-9.94M9.69 16 3.95 6.06M14.31 16H2.83M16.62 12l-5.74 9.94"/></svg>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="4"/><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg>
           </div>
-          <div class="ciklus__elem-cim">Kompresszor</div>
-          <div class="ciklus__elem-szov">A kis nyomású hűtőközeg gőzt összenyomja és a kondenzátor felé továbbítja, megemelve a nyomást és a hőmérsékletet.</div>
+          <div class="ciklus__elem-cim" data-i18n="c1.name">Kompresszor</div>
+          <div class="ciklus__elem-szov" data-i18n="c1.desc">A kis nyomású hűtőközeg gőzt összenyomja és a kondenzátor felé továbbítja, megemelve a nyomást és a hőmérsékletet.</div>
         </div>
-
         <div class="ciklus__elem">
           <div class="ciklus__elem-szam">02 / 05</div>
           <div class="ciklus__elem-ikon">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4"/></svg>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4"/><circle cx="12" cy="12" r="2"/></svg>
           </div>
-          <div class="ciklus__elem-cim">Kondenzátor</div>
-          <div class="ciklus__elem-szov">A ventilátor segítségével a hűtőközeg leadja hőjét a külső levegőnek, és gőzből folyékony halmazállapotba alakul át.</div>
+          <div class="ciklus__elem-cim" data-i18n="c2.name">Kondenzátor</div>
+          <div class="ciklus__elem-szov" data-i18n="c2.desc">A ventilátor segítségével a hűtőközeg leadja hőjét a külső levegőnek, és gőzből folyékony halmazállapotba alakul át.</div>
         </div>
-
         <div class="ciklus__elem">
           <div class="ciklus__elem-szam">03 / 05</div>
           <div class="ciklus__elem-ikon">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
           </div>
-          <div class="ciklus__elem-cim">Szárító-szűrő</div>
-          <div class="ciklus__elem-szov">Kiszűri a szennyeződéseket és a nedvességet a hűtőközegből, megvédve a rendszer többi elemét.</div>
+          <div class="ciklus__elem-cim" data-i18n="c3.name">Szárító-szűrő</div>
+          <div class="ciklus__elem-szov" data-i18n="c3.desc">Kiszűri a szennyeződéseket és a nedvességet a hűtőközegből, megvédve a rendszer többi elemét.</div>
         </div>
-
         <div class="ciklus__elem">
           <div class="ciklus__elem-szam">04 / 05</div>
           <div class="ciklus__elem-ikon">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/><path d="M8 12h4"/></svg>
           </div>
-          <div class="ciklus__elem-cim">Expanziós szelep</div>
-          <div class="ciklus__elem-szov">A folyékony hűtőközeg szűk fúvókán áthaladva nyomást veszít, mielőtt az elpárologtatóba érne.</div>
+          <div class="ciklus__elem-cim" data-i18n="c4.name">Expanziós szelep</div>
+          <div class="ciklus__elem-szov" data-i18n="c4.desc">A folyékony hűtőközeg szűk fúvókán áthaladva nyomást veszít, mielőtt az elpárologtatóba érne.</div>
         </div>
-
         <div class="ciklus__elem">
           <div class="ciklus__elem-szam">05 / 05</div>
           <div class="ciklus__elem-ikon">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/><circle cx="12" cy="12" r="3"/></svg>
           </div>
-          <div class="ciklus__elem-cim">Elpárologtató</div>
-          <div class="ciklus__elem-szov">A kabinlevegő átadja hőjét a hűtőközegnek, amely elpárolog. A lehűlt levegő visszaáramlik a fülkébe.</div>
+          <div class="ciklus__elem-cim" data-i18n="c5.name">Elpárologtató</div>
+          <div class="ciklus__elem-szov" data-i18n="c5.desc">A kabinlevegő átadja hőjét a hűtőközegnek, amely elpárolog. A lehűlt levegő visszaáramlik a fülkébe.</div>
         </div>
-
       </div>
     </div>
   </section>
@@ -336,54 +370,53 @@
   <!-- ÁLLÓFŰTÉS -->
   <section class="termek" id="allofutes">
     <div class="container">
-      <div class="sh">
-        <div class="sh__pre">Termék</div>
-        <h2 class="sh__cim">AUTOTERM AIR 2D állófűtés</h2>
-        <p class="sh__szov">Télen hideg indulás előtt már meleg kabinban kezdheti a munkát – a motor beindítása nélkül is fűt.</p>
+      <div class="sh" data-reveal>
+        <div class="sh__pre" data-i18n="prod.pre">Termék</div>
+        <h2 class="sh__cim" data-i18n="prod.h2">AUTOTERM AIR 2D állófűtés</h2>
+        <p class="sh__szov" data-i18n="prod.desc">Télen hideg indulás előtt már meleg kabinban kezdheti a munkát – a motor beindítása nélkül is fűt.</p>
       </div>
-
-      <div class="termek__blokk">
+      <div class="termek__blokk" data-reveal="scale">
         <div class="termek__vizual">
           <div>
-            <div class="termek__kat">Dízel levegőfűtő</div>
+            <div class="termek__kat" data-i18n="prod.kat">Dízel levegőfűtő</div>
             <div class="termek__nev">AUTOTERM<br>AIR 2D</div>
           </div>
           <div class="termek__param">
             <div class="termek__param-elem">
               <div class="termek__param-ertek">2,0 kW</div>
-              <div class="termek__param-cimke">Teljesítmény</div>
+              <div class="termek__param-cimke" data-i18n="param.power">Teljesítmény</div>
             </div>
             <div class="termek__param-elem">
               <div class="termek__param-ertek">12V</div>
-              <div class="termek__param-cimke">Feszültség</div>
+              <div class="termek__param-cimke" data-i18n="param.voltage">Feszültség</div>
             </div>
             <div class="termek__param-elem">
-              <div class="termek__param-ertek">Dízel</div>
-              <div class="termek__param-cimke">Üzemanyag</div>
+              <div class="termek__param-ertek" data-i18n="param.fuel.val">Dízel</div>
+              <div class="termek__param-cimke" data-i18n="param.fuel">Üzemanyag</div>
             </div>
           </div>
         </div>
         <div class="termek__info">
-          <p class="termek__leiras">Kompakt dízel levegőfűtő traktorokhoz és munkagépekhez. Hideg reggeleken már a munkakezdés előtt felmelegíti a kabint – a traktor motorjának beindítása nélkül üzemel, így nem terheli a motort és üzemanyagot takarít meg.</p>
+          <p class="termek__leiras" data-i18n="prod.p1">Kompakt dízel levegőfűtő traktorokhoz és munkagépekhez. Hideg reggeleken már a munkakezdés előtt felmelegíti a kabint – a traktor motorjának beindítása nélkül üzemel.</p>
           <div class="termek__lista">
             <div class="termek__lista-elem">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-              Motor nélküli, önálló üzemmód
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              <span data-i18n="prod.f1">Motor nélküli, önálló üzemmód</span>
             </div>
             <div class="termek__lista-elem">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-              Kompakt méret, traktorba is könnyedén szerelhető
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              <span data-i18n="prod.f2">Kompakt méret, könnyedén szerelhető</span>
             </div>
             <div class="termek__lista-elem">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-              Teljes körű beszerelés és beállítás
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              <span data-i18n="prod.f3">Teljes körű beszerelés és beállítás</span>
             </div>
             <div class="termek__lista-elem">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-              Garancia és utógondozás
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              <span data-i18n="prod.f4">Garancia és utógondozás</span>
             </div>
           </div>
-          <a href="#kapcsolat" class="btn btn--outline" style="align-self:flex-start;margin-top:8px">Érdeklődöm</a>
+          <a href="#kapcsolat" class="btn btn--outline" style="align-self:flex-start;margin-top:8px" data-i18n="prod.cta">Érdeklődöm</a>
         </div>
       </div>
     </div>
@@ -393,51 +426,53 @@
   <section class="tipusok" id="tipusok">
     <div class="container">
       <div class="tipusok__inner">
-        <div>
-          <div class="tipusok__cimke">Kompatibilis típusok</div>
-          <h2 class="tipusok__cim">Melyik MTZ típushoz szereljük?</h2>
-          <p class="tipusok__megjegyzes">A felsorolt Belarus MTZ típusokhoz rendszeresen végzünk klímabeépítést. Saját géptípusáról is érdeklődjön – egyedi megoldásokat is vállalunk.</p>
+        <div data-reveal="left">
+          <div class="tipusok__cimke" data-i18n="types.pre">Kompatibilis típusok</div>
+          <h2 class="tipusok__cim" data-i18n="types.h2">Melyik traktorhoz szereljük?</h2>
+          <p class="tipusok__megjegyzes" data-i18n="types.desc">Az alábbi MTZ típusokhoz rendszeresen végzünk klímabeépítést – de bármilyen traktorhoz, kombájnhoz vagy munkagéphez vállalunk egyedi megoldást.</p>
         </div>
-        <div class="tipusok__chips">
+        <div class="tipusok__chips" data-reveal="right">
           <div class="tipusok__chip">MTZ 820.4</div>
           <div class="tipusok__chip">MTZ 952.3</div>
           <div class="tipusok__chip">MTZ 952.4</div>
           <div class="tipusok__chip">MTZ 892.2</div>
           <div class="tipusok__chip">MTZ 1025.2</div>
           <div class="tipusok__chip">Kombájnok</div>
-          <div class="tipusok__chip tipusok__chip--halvany">Egyéb munkagép – kérdezze meg</div>
+          <div class="tipusok__chip">Személyautók</div>
+          <div class="tipusok__chip">Teherautók</div>
+          <div class="tipusok__chip tipusok__chip--halvany" data-i18n="types.other">Egyéb – kérdezze meg</div>
         </div>
       </div>
     </div>
   </section>
 
   <!-- GARANCIA SÁV -->
-  <section class="garancia">
+  <section class="garancia" data-reveal>
     <div class="container">
       <div class="garancia__inner">
         <div class="garancia__bal">
-          <div class="garancia__ev">1</div>
-          <div class="garancia__ev-cimke">év garancia minden beépítésre</div>
+          <div class="garancia__ev" data-counter-display>1</div>
+          <div class="garancia__ev-cimke" data-i18n="warranty.label">év garancia minden beépítésre</div>
         </div>
         <ul class="garancia__lista">
           <li class="garancia__elem">
             <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-            F-gáz VI–VII. minősített technikusok végzik a munkát
+            <span data-i18n="w1">F-gáz VI–VII. minősített technikusok végzik a munkát</span>
           </li>
           <li class="garancia__elem">
             <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-            Kötelező 6 hónapos és garanciavégi ellenőrzés
+            <span data-i18n="w2">Kötelező 6 hónapos és garanciavégi ellenőrzés</span>
           </li>
           <li class="garancia__elem">
             <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-            Tartós, üzembiztos rendszerek a legnagyobb hőségben is
+            <span data-i18n="w3">Tartós, üzembiztos rendszerek a legnagyobb hőségben is</span>
           </li>
           <li class="garancia__elem">
             <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-            Kiszállás az ügyfélhez – egész Magyarország területén
+            <span data-i18n="w4">Kiszállás – egész Magyarország + román határ menti települések</span>
           </li>
         </ul>
-        <a href="#kapcsolat" class="btn btn--ghost">Ajánlatot kérek</a>
+        <a href="#kapcsolat" class="btn btn--ghost" data-i18n="warranty.cta">Ajánlatot kérek</a>
       </div>
     </div>
   </section>
@@ -445,80 +480,88 @@
   <!-- KAPCSOLAT -->
   <section class="kapcsolat" id="kapcsolat">
     <div class="container">
-      <div class="sh">
-        <div class="sh__pre">Kapcsolat</div>
-        <h2 class="sh__cim">Vegye fel velünk a kapcsolatot</h2>
-        <p class="sh__szov">Ajánlatkérés, időpontfoglalás vagy kérdés esetén írjon vagy hívjon bennünket – hétköznap 8 és 17 óra között.</p>
+      <div class="sh" data-reveal>
+        <div class="sh__pre" data-i18n="contact.pre">Kapcsolat</div>
+        <h2 class="sh__cim" data-i18n="contact.h2">Vegye fel velünk a kapcsolatot</h2>
+        <p class="sh__szov" data-i18n="contact.desc">Ajánlatkérés, időpontfoglalás vagy kérdés esetén írjon vagy hívjon bennünket – hétköznap 8 és 17 óra között.</p>
       </div>
       <div class="kapcsolat__inner">
-        <div>
+        <div data-reveal="left">
           <div class="kapcsolat__blokkok">
             <div class="kapcsolat__blokk">
-              <div class="kapcsolat__cimke">Telefon</div>
+              <div class="kapcsolat__cimke" data-i18n="c.phone">Telefon</div>
               <div class="kapcsolat__ertek"><a href="tel:+36309780784">+36 (30) 978 0784</a></div>
-              <div class="kapcsolat__megjegyzes">Hétfő–Péntek: 8:00–17:00</div>
+              <div class="kapcsolat__megjegyzes" data-i18n="c.hours">Hétfő–Péntek: 8:00–17:00</div>
             </div>
             <div class="kapcsolat__blokk">
-              <div class="kapcsolat__cimke">E-mail</div>
+              <div class="kapcsolat__cimke" data-i18n="c.email">E-mail</div>
               <div class="kapcsolat__ertek"><a href="mailto:info@mtzklima.hu">info@mtzklima.hu</a></div>
             </div>
             <div class="kapcsolat__blokk">
-              <div class="kapcsolat__cimke">Székhely</div>
+              <div class="kapcsolat__cimke" data-i18n="c.address">Székhely</div>
               <div class="kapcsolat__ertek">4002 Debrecen, Jégvirág utca 21</div>
             </div>
             <div class="kapcsolat__blokk">
               <div class="kapcsolat__cimke">Facebook</div>
-              <div class="kapcsolat__ertek">
-                <a href="https://www.facebook.com/mtzklima.hu" target="_blank" rel="noopener">facebook.com/mtzklima.hu</a>
-              </div>
+              <div class="kapcsolat__ertek"><a href="https://www.facebook.com/mtzklima.hu" target="_blank" rel="noopener">facebook.com/mtzklima.hu</a></div>
             </div>
           </div>
+
+          <div class="kapcsolat__romania">
+            <strong data-i18n="romania.title">Romániai kiszállás is elérhető!</strong><br>
+            <span data-i18n="romania.desc">A debreceni határ közelsége miatt a román határ menti településekre – Nagyvárad (Oradea), Szatmárnémeti (Satu Mare) és környékére – is vállalunk kiszállást. Érdeklődjön telefonon!</span>
+          </div>
+
           <div class="kapcsolat__terkep">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2693.6!2d21.6338!3d47.5316!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47470e0f6b4c4e4b%3A0x1234!2zSmVndmlyYWcgdS4gMjEsIERlYnJlY2Vu!5e0!3m2!1shu!2shu!4v1700000000000"
-              allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"
-              title="MTZ Klíma helyszín – Debrecen">
+              src="https://maps.google.com/maps?q=Debrecen+J%C3%A9gvir%C3%A1g+utca+21+Hungary&z=16&output=embed&hl=hu"
+              allowfullscreen loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              title="MTZ Klíma – Debrecen, Jégvirág utca 21">
             </iframe>
           </div>
         </div>
 
-        <div class="form">
-          <div class="form__cim">Írjon nekünk</div>
-          <form id="kapcsolatForm" novalidate>
-            <div class="form__sor">
-              <div class="form__mezo">
-                <label for="nev">Neve</label>
-                <input type="text" id="nev" name="nev" placeholder="Kovács János" required />
+        <div data-reveal="right">
+          <div class="form">
+            <div class="form__cim" data-i18n="form.title">Írjon nekünk</div>
+            <form id="kapcsolatForm" novalidate>
+              <div class="form__sor">
+                <div class="form__mezo">
+                  <label for="nev" data-i18n="form.name">Neve</label>
+                  <input type="text" id="nev" name="nev" placeholder="Kovács János" required />
+                </div>
+                <div class="form__mezo">
+                  <label for="telefon" data-i18n="form.phone">Telefon</label>
+                  <input type="tel" id="telefon" name="telefon" placeholder="+36 30 …" />
+                </div>
               </div>
               <div class="form__mezo">
-                <label for="telefon">Telefon</label>
-                <input type="tel" id="telefon" name="telefon" placeholder="+36 30 …" />
+                <label for="email" data-i18n="form.email">E-mail cím</label>
+                <input type="email" id="email" name="email" placeholder="pelda@email.hu" required />
               </div>
-            </div>
-            <div class="form__mezo">
-              <label for="email">E-mail cím</label>
-              <input type="email" id="email" name="email" placeholder="pelda@email.hu" required />
-            </div>
-            <div class="form__mezo">
-              <label for="targy">Tárgy</label>
-              <select id="targy" name="targy">
-                <option value="">Válasszon témát…</option>
-                <option value="bepites">Klímarendszer beépítés</option>
-                <option value="javitas">Klímarendszer javítás</option>
-                <option value="allofutes">Állófűtés (AUTOTERM)</option>
-                <option value="elektromos">Elektromos szerelés</option>
-                <option value="egyeb">Egyéb kérdés</option>
-              </select>
-            </div>
-            <div class="form__mezo">
-              <label for="uzenet">Üzenet</label>
-              <textarea id="uzenet" name="uzenet" placeholder="Géptípus, probléma rövid leírása…" required></textarea>
-            </div>
-            <button type="submit" class="form__submit">Üzenet elküldése</button>
-            <div class="form__siker" id="siker" role="alert">
-              Köszönjük üzenetét! Hamarosan felvesszük Önnel a kapcsolatot.
-            </div>
-          </form>
+              <div class="form__mezo">
+                <label for="targy" data-i18n="form.subject">Tárgy</label>
+                <select id="targy" name="targy">
+                  <option value="" data-i18n="form.opt0">Válasszon témát…</option>
+                  <option value="bepites" data-i18n="form.opt1">Klímarendszer beépítés</option>
+                  <option value="javitas" data-i18n="form.opt2">Klímarendszer javítás</option>
+                  <option value="auto" data-i18n="form.opt3">Autó klíma szerviz</option>
+                  <option value="allofutes" data-i18n="form.opt4">Állófűtés (AUTOTERM)</option>
+                  <option value="elektromos" data-i18n="form.opt5">Elektromos szerelés</option>
+                  <option value="egyeb" data-i18n="form.opt6">Egyéb kérdés</option>
+                </select>
+              </div>
+              <div class="form__mezo">
+                <label for="uzenet" data-i18n="form.message">Üzenet</label>
+                <textarea id="uzenet" name="uzenet" data-i18n-placeholder="form.placeholder" placeholder="Géptípus, probléma rövid leírása…" required></textarea>
+              </div>
+              <button type="submit" class="form__submit" data-i18n="form.submit">Üzenet elküldése</button>
+              <div class="form__siker" id="siker" role="alert" data-i18n="form.success">
+                Köszönjük üzenetét! Hamarosan felvesszük Önnel a kapcsolatot.
+              </div>
+            </form>
+          </div>
         </div>
       </div>
     </div>
@@ -535,33 +578,43 @@
             </div>
             <span class="lablec__logo-text">MTZ Klíma</span>
           </div>
-          <p class="lablec__leiras">Belarus MTZ traktorok és mezőgazdasági gépek klímarendszer-szakértője Debrecenből. F-gáz VI–VII. minősítéssel, 1 év garanciával.</p>
+          <p class="lablec__leiras" data-i18n="footer.desc">Bármilyen traktor, autó és mezőgazdasági gép klímarendszer-szakértője Debrecenből. F-gáz VI–VII. minősítéssel, 1 év garanciával.</p>
           <a href="https://www.facebook.com/mtzklima.hu" target="_blank" rel="noopener" class="lablec__fb">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
             Facebook
           </a>
         </div>
         <div>
-          <div class="lablec__col-cim">Szolgáltatások</div>
+          <div class="lablec__col-cim" data-i18n="footer.services">Szolgáltatások</div>
           <ul class="lablec__col">
-            <li><a href="#szolgaltatasok">Klímarendszer beépítés</a></li>
-            <li><a href="#szolgaltatasok">Klímarendszer javítás</a></li>
-            <li><a href="#allofutes">AUTOTERM állófűtés</a></li>
-            <li><a href="#szolgaltatasok">Elektromos szerelés</a></li>
+            <li><a href="#szolgaltatasok" data-i18n="s1.title">Klímarendszer beépítés</a></li>
+            <li><a href="#szolgaltatasok" data-i18n="s2.title">Klímarendszer javítás</a></li>
+            <li><a href="#szolgaltatasok" data-i18n="s3.title">Autó és gépjármű klíma</a></li>
+            <li><a href="#allofutes">AUTOTERM <span data-i18n="footer.heating">állófűtés</span></a></li>
+            <li><a href="#szolgaltatasok" data-i18n="s6.title">Elektromos szerelés</a></li>
           </ul>
         </div>
         <div>
-          <div class="lablec__col-cim">Elérhetőség</div>
+          <div class="lablec__col-cim" data-i18n="footer.contact">Elérhetőség</div>
           <ul class="lablec__col">
             <li><a href="tel:+36309780784">+36 (30) 978 0784</a></li>
             <li><a href="mailto:info@mtzklima.hu">info@mtzklima.hu</a></li>
-            <li style="color:rgba(255,255,255,.3);font-size:.82rem;margin-top:6px;line-height:1.65">4002 Debrecen<br>Jégvirág utca 21<br>H–P: 8:00–17:00</li>
+            <li style="color:rgba(255,255,255,.3);font-size:.82rem;margin-top:6px;line-height:1.65">
+              4002 Debrecen<br>Jégvirág utca 21<br>
+              <span data-i18n="footer.hours">H–P: 8:00–17:00</span>
+            </li>
           </ul>
         </div>
       </div>
-      <p class="lablec__copy">&copy; 2025 MTZ Klíma – Vígvári Sándor. Minden jog fenntartva.</p>
+      <p class="lablec__copy" data-i18n="footer.copy">&copy; 2025 MTZ Klíma – Vígvári Sándor. Minden jog fenntartva.</p>
     </div>
   </footer>
+
+  <!-- FLOATING CALL BUTTON -->
+  <a href="tel:+36309780784" class="float-cta" id="floatCta" aria-label="Hívjon minket">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+    <span data-i18n="float.call">+36 (30) 978 0784</span>
+  </a>
 
   <script src="js/main.js"></script>
 </body>
