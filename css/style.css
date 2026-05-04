@@ -98,10 +98,8 @@ ul{list-style:none}
    ================================================ */
 .nav{position:sticky;top:0;z-index:900;background:var(--feher);border-bottom:1px solid var(--vonal);box-shadow:0 1px 6px rgba(11,31,51,.06)}
 .nav__inner{display:flex;align-items:center;justify-content:space-between;height:64px;gap:16px}
-.nav__logo{display:flex;align-items:center;gap:11px;flex-shrink:0}
-.nav__logo-mark{width:36px;height:36px;background:var(--kek);border-radius:var(--radius-s);display:flex;align-items:center;justify-content:center;flex-shrink:0}
-.nav__logo-text{font-size:1.05rem;font-weight:800;letter-spacing:-.02em;color:var(--kek-sotet);line-height:1.1}
-.nav__logo-sub{font-size:.65rem;font-weight:600;color:var(--halvany);letter-spacing:.06em;text-transform:uppercase}
+.nav__logo{display:flex;align-items:center;flex-shrink:0}
+.nav__logo-img{height:44px;width:auto;display:block;object-fit:contain}
 .nav__links{display:flex;align-items:center;gap:2px;flex:1}
 .nav__links a{font-size:.85rem;font-weight:500;color:var(--halvany);padding:6px 12px;border-radius:var(--radius-s);transition:color var(--atm),background var(--atm);white-space:nowrap}
 .nav__links a:hover{color:var(--kek);background:var(--kek-light)}
@@ -432,9 +430,14 @@ ul{list-style:none}
    ================================================ */
 .lablec{background:var(--kek-sotet);padding:56px 0 28px;color:rgba(255,255,255,.5)}
 .lablec__inner{display:grid;grid-template-columns:2fr 1fr 1fr;gap:48px;padding-bottom:40px;border-bottom:1px solid rgba(255,255,255,.07)}
-.lablec__logo{display:flex;align-items:center;gap:10px;margin-bottom:14px}
-.lablec__logo-mark{width:30px;height:30px;background:var(--kek);border-radius:var(--radius-s);display:flex;align-items:center;justify-content:center;flex-shrink:0}
-.lablec__logo-text{font-size:.95rem;font-weight:800;color:var(--feher)}
+.lablec__logo{display:flex;align-items:center;margin-bottom:14px}
+.lablec__logo-img{
+  height:52px;width:auto;
+  object-fit:contain;
+  background:var(--feher);
+  border-radius:var(--radius-s);
+  padding:6px 10px;
+}
 .lablec__leiras{font-size:.84rem;line-height:1.75;max-width:300px;margin-bottom:20px}
 .lablec__fb{display:inline-flex;align-items:center;gap:8px;background:#1877f2;color:var(--feher);padding:8px 16px;border-radius:var(--radius-s);font-size:.8rem;font-weight:600;transition:background var(--atm)}
 .lablec__fb:hover{background:#1461cc}
