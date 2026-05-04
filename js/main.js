@@ -129,6 +129,9 @@ const t = {
     'footer.hours':   'H–P: 8:00–17:00',
     'footer.copy':    '© 2025 MTZ Klíma – Vígvári Sándor. Minden jog fenntartva.',
     'float.call':     '+36 (30) 978 0784',
+    'gallery.1':      'Traktor klimatizálás',
+    'gallery.2':      'Szakszerű szerviz',
+    'gallery.3':      'Profi felszerelés',
   },
 
   ro: {
@@ -256,6 +259,9 @@ const t = {
     'footer.hours':   'L–V: 8:00–17:00',
     'footer.copy':    '© 2025 MTZ Klíma – Vígvári Sándor. Toate drepturile rezervate.',
     'float.call':     '+36 (30) 978 0784',
+    'gallery.1':      'Climatizare tractor',
+    'gallery.2':      'Service profesional',
+    'gallery.3':      'Echipament profesional',
   }
 };
 
